@@ -1,27 +1,56 @@
+import { Link } from 'react-router-dom'
+
 const variants = {
   primary:
-    'border-transparent bg-[var(--accent-bg)] hover:border-[var(--accent-border)] hover:shadow-[var(--shadow)]',
+    'border-transparent bg-[var(--bg-icon)] text-[var(--text)] hover:bg-[var(--bg-icon-hover)]',
   secondary:
-    'border-[var(--border)] bg-transparent hover:border-[var(--accent-border)] hover:bg-[var(--accent-bg)]',
+    'border border-[var(--border-divider)] bg-transparent text-[var(--text)] hover:border-[var(--text-muted)]',
 }
 
-export default function Button({ children, href, variant = 'primary', ...props }) {
+function PlaceholderIcon({ shape }) {
+  const className = 'size-4 shrink-0 bg-[var(--text-muted)] opacity-50'
+
+  if (shape === 'circle') {
+    return <span className={`${className} rounded-full`} aria-hidden="true" />
+  }
+
+  return <span className={`${className} rounded-sm`} aria-hidden="true" />
+}
+
+export default function Button({ children, href, to, variant = 'primary', icon, ...props }) {
   const className = [
-    'inline-flex items-center rounded-md border-2 px-4 py-2 text-base text-[var(--text-h)] transition-[border-color,background-color,box-shadow] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]',
+    'inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-[14px] leading-[22px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]',
     variants[variant],
   ].join(' ')
+
+  const content = (
+    <>
+      {icon}
+      {children}
+    </>
+  )
+
+  if (to) {
+    return (
+      <Link to={to} className={className} {...props}>
+        {content}
+      </Link>
+    )
+  }
 
   if (href) {
     return (
       <a href={href} className={className} {...props}>
-        {children}
+        {content}
       </a>
     )
   }
 
   return (
     <button type="button" className={className} {...props}>
-      {children}
+      {content}
     </button>
   )
 }
+
+export { PlaceholderIcon }

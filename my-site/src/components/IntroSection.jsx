@@ -1,4 +1,6 @@
+import Button, { PlaceholderIcon } from './Button'
 import LinkSection from './LinkSection'
+import { getEssayLinkItems } from '../data/essays'
 
 const projects = [
   { label: 'Headline', meta: 'March 2026', href: 'https://example.com' },
@@ -7,16 +9,10 @@ const projects = [
   { label: 'Headline', meta: 'Soon', disabled: true },
 ]
 
-const essays = [
-  { label: 'Are designers obsolete?', meta: '10 min read', href: 'https://example.com' },
-  { label: 'One shotting design requests', meta: '10 min read', href: 'https://example.com' },
-  { label: 'My ecperience in San Francisco', meta: '10 min read', href: 'https://example.com' },
-]
-
 export default function IntroSection() {
   return (
     <section aria-label="Introduction" className="pt-[120px] pb-0">
-      <div className="mx-auto flex w-full max-w-[520px] flex-col px-[30px]">
+      <div className="mx-auto flex w-full max-w-[600px] flex-col px-[30px]">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-3.5">
             <div
@@ -45,6 +41,25 @@ export default function IntroSection() {
               <p>
                 Alongside that, I teach and mentor people on how to design human-centered products, adopt design and systems thinking, and integrate AI into their work in a meaningful way.
               </p>
+              <div className="flex flex-wrap gap-2">
+                <Button to="/essays">Essays</Button>
+                <Button
+                  href="https://www.linkedin.com/in/balazsketyi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  icon={<PlaceholderIcon shape="square" />}
+                >
+                  LinkedIn
+                </Button>
+                <Button
+                  href="https://github.com/KetyiBalazs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  icon={<PlaceholderIcon shape="circle" />}
+                >
+                  GitHub
+                </Button>
+              </div>
             </div>
           </div>
 
@@ -56,7 +71,7 @@ export default function IntroSection() {
 
               <div className="h-px w-full bg-[var(--border-divider)]" />
 
-              <LinkSection id="essays" title="Essays" items={essays} />
+              <LinkSection id="essays" title="Essays" items={getEssayLinkItems()} />
             </div>
 
             <div className="h-px w-full bg-[var(--border-divider)]" aria-hidden="true" />

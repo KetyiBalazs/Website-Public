@@ -1,16 +1,19 @@
-import IntroSection from './components/IntroSection'
+import { Route, Routes } from 'react-router-dom'
 import ThemeToggle from './components/ThemeToggle'
-import LiveLocation from './components/LiveLocation'
+import EssayPage from './pages/EssayPage'
+import EssaysPage from './pages/EssaysPage'
+import HomePage from './pages/HomePage'
 
 function App() {
   return (
-    <main className="site">
+    <>
       <ThemeToggle />
-      <IntroSection />
-      <footer className="mx-auto w-full max-w-[520px] px-[30px] pt-7 pb-0 text-[13px] leading-5 text-[var(--text-muted)]">
-        <LiveLocation />
-      </footer>
-    </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/essays" element={<EssaysPage />} />
+        <Route path="/essays/:slug" element={<EssayPage />} />
+      </Routes>
+    </>
   )
 }
 

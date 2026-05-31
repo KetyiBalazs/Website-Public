@@ -13,6 +13,7 @@
   --button-bg-hover: #f0f0f0;
   --button-text: #0a0a0a;
   --accent: #fb5ab2;
+  --image-placeholder: #171717;
 
   --font-sf: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
     "Helvetica Neue", Arial, sans-serif;
@@ -39,6 +40,7 @@
   --button-bg: #0a0a0a;
   --button-bg-hover: #262626;
   --button-text: #fff;
+  --image-placeholder: #171717;
   color-scheme: light;
 }
 
@@ -67,6 +69,28 @@ h3 {
 }
 
 .site-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.essay-content h1,
+.essay-content h2,
+.essay-content h3,
+.essay-content p,
+.essay-content ul,
+.essay-content ol {
+  margin: 0;
+}
+
+.essay-content h1,
+.essay-content h2,
+.essay-content h3 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+.essay-content a {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
