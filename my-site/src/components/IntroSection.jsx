@@ -1,38 +1,107 @@
-import Button from './Button'
+import LinkSection from './LinkSection'
+
+const projects = [
+  { label: 'Headline', meta: 'March 2026', href: 'https://example.com' },
+  { label: 'Headline', meta: 'April 2026', href: 'https://example.com' },
+  { label: 'Headline', meta: 'Soon', disabled: true },
+  { label: 'Headline', meta: 'Soon', disabled: true },
+]
+
+const essays = [
+  { label: 'Are designers obsolete?', meta: '10 min read', href: 'https://example.com' },
+  { label: 'One shotting design requests', meta: '10 min read', href: 'https://example.com' },
+  { label: 'My ecperience in San Francisco', meta: '10 min read', href: 'https://example.com' },
+]
 
 export default function IntroSection() {
   return (
-    <section className="flex w-full flex-col items-start gap-y-8 px-8 py-16 text-left md:px-12 md:py-24">
-      <p className="text-sm text-[var(--text)]">lorem, ipsum, dolor</p>
+    <section aria-label="Introduction" className="pt-[120px] pb-0">
+      <div className="mx-auto flex w-full max-w-[520px] flex-col px-[30px]">
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-3.5">
+            <div
+              className="flex flex-wrap gap-1.5 text-[14px] leading-[22px] text-[var(--text-muted)]"
+              aria-label="Greetings"
+            >
+              <span>Hello,</span>
+              <span lang="ja">üdvözöllek</span>
+            </div>
 
-      <h1 className="max-w-2xl text-2xl font-medium leading-snug tracking-tight text-[var(--text-h)] md:text-3xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.
-      </h1>
+            <div className="flex flex-col gap-3">
+              <p>
+              My name is Balázs Kétyi. I'm a product designer, design engineer, and educator from Hungary, now based in San Francisco.                <a
+                  href="https://www.internode.ai"
+                  className="site-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Internode
+                </a>{' '}
+                — an AI-native product building system for teams.
+              </p>
+              <p>
+          I've spent years working on complex systems and design systems, and I'm currently building Internode — an AI-native product building system for teams.
+                </p>
+              <p>
+                Alongside that, I teach and mentor people on how to design human-centered products, adopt design and systems thinking, and integrate AI into their work in a meaningful way.
+              </p>
+            </div>
+          </div>
 
-      <p className="max-w-2xl text-lg leading-relaxed text-[var(--text-h)]">
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore.
-      </p>
+          <div className="flex flex-col gap-6">
+            <div className="hidden" aria-hidden="true">
+              <div className="h-px w-full bg-[var(--border-divider)]" />
 
-      <p className="max-w-2xl text-lg leading-relaxed text-[var(--text-h)]">
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-        officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
-        omnis iste natus error sit voluptatem.
-      </p>
+              <LinkSection id="projects" title="Projects" items={projects} />
 
-      <p className="max-w-2xl text-lg text-[var(--text-h)]">
-        Explore my{' '}
-        <a
-          href="#work"
-          className="underline decoration-1 underline-offset-4 transition-opacity hover:opacity-70"
-        >
-          selected work
-        </a>
-        .
-      </p>
+              <div className="h-px w-full bg-[var(--border-divider)]" />
 
-      <Button href="#contact">Get in touch</Button>
+              <LinkSection id="essays" title="Essays" items={essays} />
+            </div>
+
+            <div className="h-px w-full bg-[var(--border-divider)]" aria-hidden="true" />
+
+            <section
+              className="mb-6 flex flex-col gap-3.5"
+              aria-labelledby="connect-title"
+            >
+              <h2
+                id="connect-title"
+                className="text-[14px] font-normal text-[var(--text-muted)]"
+              >
+                Connect with me
+              </h2>
+              <div className="flex flex-col gap-3">
+                <p>
+                  Reach me on{' '}
+                  <a
+                    href="https://www.instagram.com/balazsketyi"
+                    className="site-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </a>
+                  , via{' '}
+                  <a href="mailto:hello@ketyi.me" className="site-link">
+                    hello@ketyi.me
+                  </a>
+                  , and follow me on{' '}
+                  <a
+                    href="https://x.com/balazsketyi"
+                    className="site-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    X (Twitter)
+                  </a>
+                  .
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
