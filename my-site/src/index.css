@@ -3,7 +3,6 @@
 :root {
   --font-sf: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
     "Helvetica Neue", Arial, sans-serif;
-  --accent: #fb5ab2;
 
   font: 14px/22px var(--font-sf);
   font-synthesis: none;
