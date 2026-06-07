@@ -35,9 +35,11 @@ export default function LiveLocation() {
 
   return (
     <>
-      <p className="text-[var(--text)]">My current location is:</p>
-      <p>
-        {LOCATION} · {timeLabel}
+      <p className="text-[var(--text)]">Current location is:</p>
+      <p className="flex items-center gap-2">
+        <span>{LOCATION}</span>
+        <span aria-hidden="true">·</span>
+        <span>{timeLabel}</span>
       </p>
     </>
   )

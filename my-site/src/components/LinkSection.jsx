@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function LinkSection({ id, title, items }) {
   return (
     <section
-      className="mb-6 flex flex-col gap-3.5"
+      className="flex flex-col gap-3"
       aria-labelledby={`${id}-title`}
     >
       <h2 id={`${id}-title`} className="text-[14px] font-normal text-[var(--text-muted)]">

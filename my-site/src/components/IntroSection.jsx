@@ -1,4 +1,4 @@
-import Button, { PlaceholderIcon } from './Button'
+import Button, { GitHubIcon, LinkedInIcon } from './Button'
 import LinkSection from './LinkSection'
 import { getEssayLinkItems } from '../data/essays'
 
@@ -12,20 +12,19 @@ const projects = [
 export default function IntroSection() {
   return (
     <section aria-label="Introduction" className="pt-[120px] pb-0">
-      <div className="mx-auto flex w-full max-w-[600px] flex-col px-[30px]">
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-3.5">
+      <div className="mx-auto flex w-full max-w-[600px] flex-col px-6">
+        <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3">
             <div
               className="flex flex-wrap gap-1.5 text-[14px] leading-[22px] text-[var(--text-muted)]"
-              aria-label="Greetings"
+              aria-label="Hey"
             >
-              <span>Hello,</span>
-              <span lang="ja">üdvözöllek</span>
+              <span>Hey,</span>
             </div>
 
             <div className="flex flex-col gap-3">
               <p>
-              My name is Balázs Kétyi. I'm a product designer, design engineer, and educator from Hungary, now based in San Francisco.                <a
+              I'm Balázs - a designer, builder and mentor. Co-founder of <a
                   href="https://www.internode.ai"
                   className="site-link"
                   target="_blank"
@@ -33,21 +32,24 @@ export default function IntroSection() {
                 >
                   Internode
                 </a>{' '}
-                — an AI-native product building system for teams.
+              - the AI native product building system for enterprise teams.
               </p>
               <p>
-          I've spent years working on complex systems and design systems, and I'm currently building Internode — an AI-native product building system for teams.
+          Previously, studio founder and teacher - who spent 10 years working on designing interfaces and design systems for complex systems in industries like: space, robotics, fintech and government.
                 </p>
               <p>
-                Alongside that, I teach and mentor people on how to design human-centered products, adopt design and systems thinking, and integrate AI into their work in a meaningful way.
+                From Hungary, currently living in California.
               </p>
-              <div className="flex flex-wrap gap-2">
-                <Button to="/essays">Essays</Button>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Button>
+                  Essays{' '}
+                  <span className="text-[var(--text-muted)]">(coming soon)</span>
+                </Button>
                 <Button
                   href="https://www.linkedin.com/in/balazsketyi/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  icon={<PlaceholderIcon shape="square" />}
+                  icon={<LinkedInIcon />}
                 >
                   LinkedIn
                 </Button>
@@ -55,7 +57,7 @@ export default function IntroSection() {
                   href="https://github.com/KetyiBalazs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  icon={<PlaceholderIcon shape="circle" />}
+                  icon={<GitHubIcon />}
                 >
                   GitHub
                 </Button>
@@ -63,7 +65,7 @@ export default function IntroSection() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="mt-4 flex flex-col gap-4">
             <div className="hidden" aria-hidden="true">
               <div className="h-px w-full bg-[var(--border-divider)]" />
 
@@ -77,7 +79,7 @@ export default function IntroSection() {
             <div className="h-px w-full bg-[var(--border-divider)]" aria-hidden="true" />
 
             <section
-              className="mb-6 flex flex-col gap-3.5"
+              className="flex flex-col gap-0"
               aria-labelledby="connect-title"
             >
               <h2
@@ -86,33 +88,31 @@ export default function IntroSection() {
               >
                 Connect with me
               </h2>
-              <div className="flex flex-col gap-3">
-                <p>
-                  Reach me on{' '}
-                  <a
-                    href="https://www.instagram.com/balazsketyi"
-                    className="site-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Instagram
-                  </a>
-                  , via{' '}
-                  <a href="mailto:hello@ketyi.me" className="site-link">
-                    hello@ketyi.me
-                  </a>
-                  , and follow me on{' '}
-                  <a
-                    href="https://x.com/balazsketyi"
-                    className="site-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    X (Twitter)
-                  </a>
-                  .
-                </p>
-              </div>
+              <p>
+                Reach me on{' '}
+                <a
+                  href="https://www.instagram.com/balazsketyi"
+                  className="site-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+                , via{' '}
+                <a href="mailto:balazs@internode.ai" className="site-link">
+                  balazs@internode.ai 
+                </a>
+                , or follow me on{' '}
+                <a
+                  href="https://x.com/balazsketyi"
+                  className="site-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  X (Twitter)
+                </a>
+                .
+              </p>
             </section>
           </div>
         </div>

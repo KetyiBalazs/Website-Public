@@ -1,6 +1,19 @@
 @import "tailwindcss";
 
 :root {
+  --font-sf: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Helvetica Neue", Arial, sans-serif;
+  --accent: #fb5ab2;
+
+  font: 14px/22px var(--font-sf);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root,
+:root[data-theme="dark"] {
   --page: #0e0e0e;
   --text: #fff;
   --text-muted: #6e6e6e;
@@ -12,20 +25,11 @@
   --button-bg: #fff;
   --button-bg-hover: #f0f0f0;
   --button-text: #0a0a0a;
-  --accent: #fb5ab2;
   --image-placeholder: #171717;
 
-  --font-sf: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
-    "Helvetica Neue", Arial, sans-serif;
-
-  font: 14px/22px var(--font-sf);
   color-scheme: dark;
   color: var(--text);
   background: var(--page);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 :root[data-theme="light"] {
@@ -41,7 +45,10 @@
   --button-bg-hover: #262626;
   --button-text: #fff;
   --image-placeholder: #171717;
+
   color-scheme: light;
+  color: var(--text);
+  background: var(--page);
 }
 
 body {
@@ -82,8 +89,16 @@ h3 {
   margin: 0;
 }
 
-.essay-content h1,
-.essay-content h2,
+.essay-content h1 {
+  font-size: 20px;
+  font-weight: medium;
+  line-height: 28px;
+}
+.essay-content h2 {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+}
 .essay-content h3 {
   font-size: 14px;
   font-weight: normal;
