@@ -32,10 +32,10 @@ export default function IntroSection() {
                 >
                   Internode
                 </a>{' '}
-              - the AI native product building system for enterprise teams.
+              - the AI-native product building system for enterprise teams.
               </p>
               <p>
-          Previously, studio founder and teacher - who spent 10 years working on designing interfaces and design systems for complex systems in industries like: space, robotics, fintech and government.
+          Previously, studio founder and teacher - I spent 10 years designing interfaces and design systems for complex products in industries like space, robotics, fintech and government.
                 </p>
               <p>
                 From Hungary, currently living in California.
