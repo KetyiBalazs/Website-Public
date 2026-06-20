@@ -1,5 +1,6 @@
-import Button, { GitHubIcon, LinkedInIcon } from './Button'
+import Button, { GitHubIcon, LinkedInIcon, SubstackIcon } from './Button'
 import LinkSection from './LinkSection'
+import PageContainer from './PageContainer'
 import { getEssayLinkItems } from '../data/essays'
 
 const projects = [
@@ -12,7 +13,7 @@ const projects = [
 export default function IntroSection() {
   return (
     <section aria-label="Introduction" className="pt-[120px] pb-0">
-      <div className="mx-auto flex w-full max-w-[600px] flex-col px-6">
+      <PageContainer>
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-3">
             <div
@@ -41,10 +42,7 @@ export default function IntroSection() {
                 From Hungary, currently living in California.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
-                <Button>
-                  Essays{' '}
-                  <span className="text-[var(--text-muted)]">(coming soon)</span>
-                </Button>
+                <Button to="/essays">Essays</Button>
                 <Button
                   href="https://www.linkedin.com/in/balazsketyi/"
                   target="_blank"
@@ -52,6 +50,14 @@ export default function IntroSection() {
                   icon={<LinkedInIcon />}
                 >
                   LinkedIn
+                </Button>
+                <Button
+                  href="https://substack.com/@ketyibalazs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  icon={<SubstackIcon />}
+                >
+                  Substack
                 </Button>
                 <Button
                   href="https://github.com/KetyiBalazs"
@@ -116,7 +122,7 @@ export default function IntroSection() {
             </section>
           </div>
         </div>
-      </div>
+      </PageContainer>
     </section>
   )
 }

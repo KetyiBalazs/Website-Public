@@ -51,6 +51,21 @@ function GitHubIcon() {
   )
 }
 
+function SubstackIcon() {
+  return (
+    <svg
+      className="h-4 w-auto shrink-0 opacity-50"
+      viewBox="0 0 448 511.471"
+      aria-hidden="true"
+    >
+      <path
+        fill="var(--text-muted)"
+        d="M0 0h448v62.804H0V0zm0 229.083h448v282.388L223.954 385.808 0 511.471V229.083zm0-114.542h448v62.804H0v-62.804z"
+      />
+    </svg>
+  )
+}
+
 export default function Button({ children, href, to, variant = 'primary', icon, ...props }) {
   const className = [
     'inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-[14px] leading-[22px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]',
@@ -87,4 +102,4 @@ export default function Button({ children, href, to, variant = 'primary', icon, 
   )
 }
 
-export { PlaceholderIcon, LinkedInIcon, GitHubIcon }
+export { PlaceholderIcon, LinkedInIcon, GitHubIcon, SubstackIcon }

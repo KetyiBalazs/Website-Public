@@ -1,4 +1,5 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
+import PageContainer from '../components/PageContainer'
 import { getEssayBySlug } from '../data/essays'
 
 export default function EssayPage() {
@@ -10,8 +11,8 @@ export default function EssayPage() {
   }
 
   return (
-    <article aria-label={essay.title} className="pt-[120px] pb-10">
-      <div className="mx-auto flex w-full max-w-[600px] flex-col px-[30px]">
+    <article aria-label={essay.title} className="pt-[120px] pb-[200px]">
+      <PageContainer>
         <div className="mb-8">
           <Link
             to="/essays"
@@ -32,7 +33,7 @@ export default function EssayPage() {
           className="essay-content flex flex-col gap-3 text-[14px] leading-[22px]"
           dangerouslySetInnerHTML={{ __html: essay.content }}
         />
-      </div>
+      </PageContainer>
     </article>
   )
 }

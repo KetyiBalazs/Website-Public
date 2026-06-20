@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
-const LOCATION = 'Hanoi, Vietnam'
-const TIME_ZONE = 'Asia/Ho_Chi_Minh'
+const LOCATION = 'San Francisco, USA'
+const TIME_ZONE = 'America/Los_Angeles'
 
 function formatLocalTime() {
   const now = new Date()

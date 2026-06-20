@@ -1,12 +1,15 @@
 import IntroSection from '../components/IntroSection'
 import LiveLocation from '../components/LiveLocation'
+import PageContainer from '../components/PageContainer'
 
 export default function HomePage() {
   return (
     <>
       <IntroSection />
-      <footer className="mx-auto flex w-full max-w-[600px] flex-col gap-0 px-6 pt-8 pb-8 align-middle text-[var(--text-muted)]">
-        <LiveLocation />
+      <footer className="pt-8 pb-8 text-[var(--text-muted)]">
+        <PageContainer className="gap-0 align-middle">
+          <LiveLocation />
+        </PageContainer>
       </footer>
     </>
   )
