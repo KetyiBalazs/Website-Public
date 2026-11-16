@@ -5,12 +5,12 @@ import { getEssayLinkItems } from '../data/essays'
 
 export default function EssaysPage() {
   return (
-    <section aria-label="Essays" className="pt-[120px] pb-10">
+    <section aria-label="Essays" className="pt-[var(--page-padding-120)] pb-10">
       <PageContainer>
         <div className="mb-8">
           <Link
             to="/"
-            className="text-[14px] text-[var(--text-muted)] transition-colors hover:text-[var(--text)]"
+            className="text-[length:var(--font-14)] text-[var(--text-muted)] transition-colors hover:text-[var(--text)]"
           >
             ← Back
           </Link>

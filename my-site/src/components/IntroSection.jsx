@@ -12,12 +12,12 @@ const projects = [
 
 export default function IntroSection() {
   return (
-    <section aria-label="Introduction" className="pt-[120px] pb-0">
+    <section aria-label="Introduction" className="pt-[var(--page-padding-120)] pb-0">
       <PageContainer>
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-3">
             <div
-              className="flex flex-wrap gap-1.5 text-[14px] leading-[22px] text-[var(--text-muted)]"
+              className="flex flex-wrap gap-1.5 text-[length:var(--font-14)] leading-[var(--font-22)] text-[var(--text-muted)]"
               aria-label="Hey"
             >
               <span>Hey,</span>
@@ -90,7 +90,7 @@ export default function IntroSection() {
             >
               <h2
                 id="connect-title"
-                className="text-[14px] font-normal text-[var(--text-muted)]"
+                className="text-[length:var(--font-14)] font-normal text-[var(--text-muted)]"
               >
                 Connect with me
               </h2>

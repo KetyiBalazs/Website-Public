@@ -6,7 +6,7 @@ export default function LinkSection({ id, title, items }) {
       className="flex flex-col gap-3"
       aria-labelledby={`${id}-title`}
     >
-      <h2 id={`${id}-title`} className="text-[14px] font-normal text-[var(--text-muted)]">
+      <h2 id={`${id}-title`} className="text-[length:var(--font-14)] font-normal text-[var(--text-muted)]">
         {title}
       </h2>
       <div className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-1.5">

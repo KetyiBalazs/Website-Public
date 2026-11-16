@@ -68,7 +68,7 @@ function SubstackIcon() {
 
 export default function Button({ children, href, to, variant = 'primary', icon, ...props }) {
   const className = [
-    'inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-[14px] leading-[22px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]',
+    'inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-[length:var(--font-14)] leading-[var(--font-22)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]',
     variants[variant],
   ].join(' ')
 

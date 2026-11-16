@@ -1,0 +1,9 @@
+---
+description: Styles in this repository follow a design contract reviewed in Grum.
+globs: **/*.css,**/*.scss,**/*.tsx,**/*.jsx,**/*.vue,**/*.svelte
+alwaysApply: true
+---
+<!-- written by grum init cursor -->
+<!-- grum rev=15 -->
+
+This repository keeps its design contract in Grum. If `.grum/AGENTS.md` exists, read `.grum/AGENTS.md` before changing code and follow it. It also says whether Grum applies to you. This file is generated locally and ignored by Git. If it is missing, follow the user's Grum setup prompt when provided; otherwise continue the task without Grum instructions. Do not run setup automatically.

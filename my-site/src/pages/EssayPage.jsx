@@ -11,26 +11,26 @@ export default function EssayPage() {
   }
 
   return (
-    <article aria-label={essay.title} className="pt-[120px] pb-[200px]">
+    <article aria-label={essay.title} className="pt-[var(--page-padding-120)] pb-[var(--page-padding-200)]">
       <PageContainer>
         <div className="mb-8">
           <Link
             to="/essays"
-            className="text-[14px] text-[var(--text-muted)] transition-colors hover:text-[var(--text)]"
+            className="text-[length:var(--font-14)] text-[var(--text-muted)] transition-colors hover:text-[var(--text)]"
           >
             ← Essays
           </Link>
         </div>
 
         <header className="mb-8 flex flex-col gap-3">
-          <h1 className="text-[14px] font-normal leading-[22px] text-[var(--text)]">
+          <h1 className="text-[length:var(--font-14)] font-normal leading-[var(--font-22)] text-[var(--text)]">
             {essay.title}
           </h1>
-          <p className="text-[14px] text-[var(--text-muted)]">{essay.meta}</p>
+          <p className="text-[length:var(--font-14)] text-[var(--text-muted)]">{essay.meta}</p>
         </header>
 
         <div
-          className="essay-content flex flex-col gap-3 text-[14px] leading-[22px]"
+          className="essay-content flex flex-col gap-3 text-[length:var(--font-14)] leading-[var(--font-22)]"
           dangerouslySetInnerHTML={{ __html: essay.content }}
         />
       </PageContainer>
