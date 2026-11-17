@@ -20,7 +20,7 @@ function PlaceholderIcon({ shape }) {
 function LinkedInIcon() {
   return (
     <svg
-      className="size-4 shrink-0 opacity-50"
+      className="size-[16px] shrink-0 opacity-50"
       viewBox="0 0 72 72"
       aria-hidden="true"
     >
@@ -39,7 +39,7 @@ function LinkedInIcon() {
 function GitHubIcon() {
   return (
     <svg
-      className="size-4 shrink-0 opacity-50"
+      className="size-[16px] shrink-0 opacity-50"
       viewBox="0 0 98 96"
       aria-hidden="true"
     >
@@ -54,7 +54,7 @@ function GitHubIcon() {
 function SubstackIcon() {
   return (
     <svg
-      className="h-4 w-auto shrink-0 opacity-50"
+      className="h-auto w-[16px] shrink-0 opacity-50"
       viewBox="0 0 448 511.471"
       aria-hidden="true"
     >
