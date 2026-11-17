@@ -37,3 +37,16 @@ Use these tokens for page spacing. Do not replace them with raw lengths, and do 
 - Use Site for a link inside a sentence. Pick `site-link` for Grum, Instagram, email, and X. A link inside essay text gets the same underline from `.essay-content a`. Don't use Site for the back link, a list-row title, or a dock control.
 - Use Icon only when the control has no visible text, and always give it an accessible label. In the dock, pick `DockIcon` for the round social links. The theme switch is the other Icon: a `size-6` button fixed at the top right. Don't swap those two, and don't use Icon for a control that shows a text label.
 - Use Button bg fill for the dock's solid "Work with me" link. It uses `--button-bg`, `--button-text`, and `--button-bg-hover`. Don't use it for the intro `Button` pills, an icon-only control, or a text link.
+
+## Typography
+
+Use these tokens for type. Keep each size with its line height. Do not use a line-height token as a font size.
+
+- `--font-sf` is the typeface for the whole site. Do not use it as a size, and do not swap in another family.
+- `--font-14` with `--font-22` is the body pair. The page already sets it. Use it for reading text, buttons, labels, meta, and back links.
+- Inside an essay, a top heading uses `--font-20` with `--font-28`. A secondary heading uses `--font-18` with `--font-24`. A smaller heading stays on the body pair. Do not use the heading sizes for body text.
+
+## Footers
+
+- Use My site footer only at the bottom of the home page, for the current location and what comes next. It is the `footer` on the home page, in the page column, in `--text-muted`.
+- It has only a default state. Do not add it to an essay page, and do not put navigation or the dock in it.
