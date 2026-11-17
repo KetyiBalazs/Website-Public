@@ -25,21 +25,21 @@ export default function IntroSection() {
 
             <div className="flex flex-col gap-3">
               <p>
-              I'm Balázs - a designer, builder and mentor. Co-founder of <a
-                  href="https://www.internode.ai"
+                I'm Balázs - a designer, builder and mentor. I'm building{' '}
+                <a
+                  href="https://www.grum.so/coming-soon"
                   className="site-link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Internode
-                </a>{' '}
-              - the AI-native product building system for enterprise teams.
+                  Grum
+                </a>, a design harness that keeps AI agents on the design system.
               </p>
               <p>
           Previously, studio founder and teacher - I spent 10 years designing interfaces and design systems for complex products in industries like space, robotics, fintech and government.
                 </p>
               <p>
-                From Hungary, currently living in California.
+                From Hungary, currently living in San Francisco.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <Button to="/essays">Essays</Button>
@@ -105,8 +105,8 @@ export default function IntroSection() {
                   Instagram
                 </a>
                 , via{' '}
-                <a href="mailto:balazs@internode.ai" className="site-link">
-                  balazs@internode.ai 
+                <a href="mailto:hello@ketyi.me" className="site-link">
+                  hello@ketyi.me 
                 </a>
                 , or follow me on{' '}
                 <a

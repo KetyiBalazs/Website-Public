@@ -33,7 +33,7 @@ Use these tokens for page spacing. Do not replace them with raw lengths, and do 
 ## When to use each button style
 
 - Use Button (Text Only) for the back link above a page. On an essay that is `← Essays`. On the essays list that is `← Back`. Both use `transition-colors`, muted text, and a hover to `--text`. Don't use it inside a sentence, in the dock, or as a filled button.
-- The Internode link is not its own style. It is a `site-link` in the intro sentence. Don't make a separate Internode button.
-- Use Site for a link inside a sentence. Pick `site-link` for Internode, Instagram, email, and X. A link inside essay text gets the same underline from `.essay-content a`. Don't use Site for the back link, a list-row title, or a dock control.
+- The Grum link is not its own style. It is a `site-link` in the intro sentence. Don't make a separate Grum button.
+- Use Site for a link inside a sentence. Pick `site-link` for Grum, Instagram, email, and X. A link inside essay text gets the same underline from `.essay-content a`. Don't use Site for the back link, a list-row title, or a dock control.
 - Use Icon only when the control has no visible text, and always give it an accessible label. In the dock, pick `DockIcon` for the round social links. The theme switch is the other Icon: a `size-6` button fixed at the top right. Don't swap those two, and don't use Icon for a control that shows a text label.
 - Use Button bg fill for the dock's solid "Work with me" link. It uses `--button-bg`, `--button-text`, and `--button-bg-hover`. Don't use it for the intro `Button` pills, an icon-only control, or a text link.

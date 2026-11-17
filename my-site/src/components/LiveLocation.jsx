@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react'
 
-const LOCATION = 'San Francisco, USA'
-const TIME_ZONE = 'America/Los_Angeles'
+const LOCATION = 'Ho Chi Minh, Vietnam'
+const TIME_ZONE = 'Asia/Ho_Chi_Minh'
+
+const NEXT_LOCATIONS = [
+  { place: 'Tokyo, Japan', when: 'until the end of January' },
+  { place: 'San Francisco, USA', when: 'from February' },
+]
 
 function formatLocalTime() {
   const now = new Date()
@@ -41,6 +46,16 @@ export default function LiveLocation() {
         <span aria-hidden="true">·</span>
         <span>{timeLabel}</span>
       </p>
+      <div className="pt-8">
+        <p className="text-[var(--text)]">Next:</p>
+        {NEXT_LOCATIONS.map(({ place, when }) => (
+          <p key={place} className="flex items-center gap-2">
+            <span>{place}</span>
+            <span aria-hidden="true">·</span>
+            <span>{when}</span>
+          </p>
+        ))}
+      </div>
     </>
   )
 }
