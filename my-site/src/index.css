@@ -83,6 +83,18 @@ a:hover {
   opacity: 0.75;
 }
 
+.build-videos a {
+  transition: opacity 150ms ease;
+}
+
+.build-videos:hover a {
+  opacity: 0.6;
+}
+
+.build-videos:hover a:hover {
+  opacity: 1;
+}
+
 p,
 h1,
 h2,
