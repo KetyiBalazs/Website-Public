@@ -10,7 +10,7 @@ const PAST = [
   { when: 'January', place: 'San Francisco, US' },
 ]
 
-const NOW = [{ when: 'November', place: 'Ho Chi Minh, VN', current: true }]
+const NOW = [{ place: 'Ho Chi Minh, VN', current: true }]
 
 const NEXT = [
   { when: 'December', place: 'Tokyo, JP' },
@@ -27,8 +27,12 @@ function StopGroup({ title, stops, muted = false }) {
           key={`${stop.when}-${stop.place}`}
           className={muted ? 'text-[var(--text-muted)]' : undefined}
         >
-          {stop.when}
-          <span aria-hidden="true"> · </span>
+          {stop.when ? (
+            <>
+              {stop.when}
+              <span aria-hidden="true"> · </span>
+            </>
+          ) : null}
           {stop.current ? (
             <span className="underline underline-offset-[3px]">{stop.place}</span>
           ) : (
@@ -70,8 +74,8 @@ function PastStops() {
 export default function TravelPlan() {
   return (
     <div className="flex min-w-0 flex-1 flex-col gap-[16px]" aria-label="Travel plan">
+      <StopGroup title="Where am I now?" stops={NOW} />
       <StopGroup title="Next" stops={NEXT} />
-      <StopGroup title="Now" stops={NOW} />
       <PastStops />
     </div>
   )

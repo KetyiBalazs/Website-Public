@@ -52,7 +52,7 @@ function ArrowUpRightIcon() {
 
 export default function AmbientSection() {
   return (
-    <section aria-labelledby="build-title" className="pt-[32px] pb-[32px]">
+    <section aria-labelledby="build-title" className="pt-[56px] pb-[32px]">
       <h2 id="build-title" className="flex flex-wrap items-baseline gap-2 font-normal">
         <span className="font-medium text-[var(--text)]">Build in public</span>
         <span className="text-[var(--text-muted)]" aria-hidden="true">

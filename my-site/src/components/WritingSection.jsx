@@ -17,7 +17,7 @@ function parseDate(value) {
 
 function formatDay(value) {
   return parseDate(value).toLocaleDateString('en-US', {
-    month: 'long',
+    month: 'short',
     day: 'numeric',
   })
 }
@@ -94,12 +94,10 @@ function WritingLink({ item }) {
   const content = (
     <>
       {item.kind === 'talk' ? <VideoIcon /> : <BlogIcon />}
-      <span className="flex min-w-0 flex-col">
-        <span className="font-medium text-[var(--text)]">
-          {item.title}
-          <ArrowUpRightIcon />
-        </span>
-        <span className="text-[var(--text-muted)]">{formatDay(item.date)}</span>
+      <span className="shrink-0 text-[var(--text-muted)]">{formatDay(item.date)}</span>
+      <span className="min-w-0 font-medium text-[var(--text)]">
+        {item.title}
+        <ArrowUpRightIcon />
       </span>
     </>
   )
@@ -135,7 +133,7 @@ export default function WritingSection() {
   const years = [...new Set(items.map((item) => parseDate(item.date).getFullYear()))]
 
   return (
-    <section aria-labelledby="writing-title" className="pt-[32px]">
+    <section aria-labelledby="writing-title" className="pt-[56px]">
       <h2 id="writing-title" className="flex items-baseline gap-2 font-normal">
         <span className="font-medium text-[var(--text)]">Writing</span>
         <span className="text-[var(--text-muted)]" aria-hidden="true">

@@ -33,7 +33,7 @@ export default function IntroSection() {
             </div>
 
             <p>
-              I'm Balázs - a designer, builder and mentor. I'm building{' '}
+              I am Balázs, design engineer, founder and mentor. Currently building{' '}
               <a
                 href="https://www.grum.so/coming-soon"
                 className="site-link"
@@ -41,7 +41,7 @@ export default function IntroSection() {
                 rel="noopener noreferrer"
               >
                 Grum
-              </a>, a design harness that keeps AI agents on the design system.
+              </a>, a design harness that hosts your design system and doesn't let your agents drift.
             </p>
             <p>
               Previously, studio founder and teacher - I spent 10 years designing interfaces and design systems for complex products in industries like space, robotics, fintech and government.
@@ -74,11 +74,14 @@ export default function IntroSection() {
                   GitHub
                 </Button>
           </div>
-          <div className="mt-[32px] flex flex-col items-center gap-4 rounded-2xl border border-[var(--border-divider)] bg-[var(--bg-surface)] px-4 pt-[calc(1rem+16px)] pb-[calc(1rem+16px)] sm:flex-row sm:items-center">
+          <div className="mt-[56px] flex flex-col gap-[16px]">
+            <h2 className="font-medium text-[var(--text)]">Let's connect in person</h2>
+            <div className="flex flex-col items-center gap-4 rounded-2xl border border-[var(--border-divider)] bg-[var(--bg-surface)] px-4 pt-[calc(1rem+16px)] pb-[calc(1rem+16px)] sm:flex-row sm:items-center">
                 <div className="w-full max-w-[280px] shrink-0 sm:w-[46%]">
                   <SiteGlobe />
                 </div>
                 <TravelPlan />
+            </div>
           </div>
 
           <div className="flex flex-col">
@@ -93,7 +96,7 @@ export default function IntroSection() {
             </div>
 
             <section
-              className="mt-[32px] flex flex-col gap-[16px]"
+              className="mt-[56px] flex flex-col gap-[16px]"
               aria-labelledby="connect-title"
             >
               <h2 id="connect-title" className="flex flex-wrap items-baseline gap-2 font-normal">
@@ -103,7 +106,8 @@ export default function IntroSection() {
                 </span>
                 <span className="text-[var(--text-muted)]">Book a call</span>
               </h2>
-              <p>
+              <div className="flex flex-col gap-[8px]">
+                <p>
                 Reach me on{' '}
                 <a
                   href="https://www.instagram.com/balazsketyi"
@@ -127,8 +131,8 @@ export default function IntroSection() {
                   X (Twitter)
                 </a>
                 .
-              </p>
-              <p>
+                </p>
+                <p>
                 <a
                   href="https://calendar.app.google/Nb8ZkJk1g9VQobTTA"
                   className="site-link"
@@ -138,7 +142,8 @@ export default function IntroSection() {
                   Book a time
                 </a>{' '}
                 for mentoring, or to talk about any design topic.
-              </p>
+                </p>
+              </div>
             </section>
           </div>
         </div>
