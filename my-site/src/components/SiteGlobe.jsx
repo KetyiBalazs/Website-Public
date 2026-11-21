@@ -26,11 +26,26 @@ function hexToRgb01(hex) {
 
 function readPalette() {
   const styles = getComputedStyle(document.documentElement)
+  const light = document.documentElement.dataset.theme === 'light'
+  const ink = hexToRgb01(styles.getPropertyValue('--text') || (light ? '#0a0a0a' : '#ffffff'))
+  const page = hexToRgb01(styles.getPropertyValue('--page') || (light ? '#fafafa' : '#0e0e0e'))
+
+  if (light) {
+    return {
+      ink,
+      land: hexToRgb01(styles.getPropertyValue('--bg-surface') || '#ffffff'),
+      page,
+      dark: 0,
+      mapBrightness: 1.35,
+    }
+  }
 
   return {
-    ink: hexToRgb01(styles.getPropertyValue('--text') || '#ffffff'),
+    ink,
     land: hexToRgb01(styles.getPropertyValue('--text-muted') || '#6e6e6e'),
-    page: hexToRgb01(styles.getPropertyValue('--page') || '#0e0e0e'),
+    page,
+    dark: 1,
+    mapBrightness: 0.9,
   }
 }
 
@@ -55,10 +70,10 @@ export default function SiteGlobe() {
       height: width,
       phi,
       theta: 0.28,
-      dark: 1,
+      dark: palette.dark,
       diffuse: 1.2,
       mapSamples: 16000,
-      mapBrightness: 0.9,
+      mapBrightness: palette.mapBrightness,
       baseColor: palette.land,
       markerColor: palette.ink,
       glowColor: palette.page,
@@ -75,8 +90,8 @@ export default function SiteGlobe() {
         theta: Math.min(0.55, Math.max(0.05, 0.28 + thetaMovement.current / 700)),
         width,
         height: width,
-        dark: 1,
-        mapBrightness: 0.9,
+        dark: palette.dark,
+        mapBrightness: palette.mapBrightness,
         baseColor: palette.land,
         markerColor: palette.ink,
         glowColor: palette.page,
